@@ -1,1 +1,1 @@
-# emotios
+# emotions
