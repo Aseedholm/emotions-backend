@@ -6,8 +6,8 @@ export class Anger extends Emotion<number> {
     @Column({type: 'numeric', nullable: true})
     additionalData: number;
 
-    constructor(intensity: number) {
-        super('Anger', intensity);
+    constructor(context: string, intensity: number) {
+        super('Anger', context ,intensity);
     }
 
     getPrompt(): string {

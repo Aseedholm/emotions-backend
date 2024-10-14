@@ -13,10 +13,10 @@ export abstract class Emotion<T> extends AbstractEntity {
     
     additionalData: T; // Generic type to allow for flexible additional data
 
-    constructor(name: string, additionalData: T) {
+    constructor(name: string, context: string, additionalData: T) {
         super();
         this.name = name;
-        this.context = '';
+        this.context = this.context;
         this.additionalData = additionalData; // Set additional data
     }
 
