@@ -31,7 +31,8 @@ export class AnxietyService {
         return this.findOne(id);
     }
 
-    async remove(id: number) : Promise<void> {
+    async remove(id: number) : Promise<number> {
         await this.anxietyRepository.delete(id);
+        return id;
     }
 }

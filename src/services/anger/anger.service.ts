@@ -30,7 +30,8 @@ export class AngerService {
         return this.findOne(id);
     }
 
-    async remove(id: number) : Promise<void> {
+    async remove(id: number) : Promise<number> {
         await this.angerRepository.delete(id);
+        return id;
     }
 }
