@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AnxietyModule } from './modules/anxiety.module';
+import { AngerModule } from './modules/anger.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       logging: true,
       synchronize: true,  // Set this to false in production
     }),
+    AnxietyModule,
+    AngerModule,
   ],
   controllers: [AppController],
   providers: [AppService],

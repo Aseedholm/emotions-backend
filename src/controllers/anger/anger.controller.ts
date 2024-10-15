@@ -1,5 +1,5 @@
 import { Controller, Post, Body, Get, Put, Delete, Param } from '@nestjs/common';
-import { CreateAngerDto } from 'src/common/dto/create-anger.dto/create-anger.dto';
+import { CreateAngerDto } from 'src/common/dto/anger/create-anger.dto/create-anger.dto';
 import { UpdateAngerDto } from 'src/common/dto/update-anger.dto/update-anger.dto';
 import { Anger } from 'src/entities/anger.entity';
 import { AngerService } from 'src/services/anger/anger.service';
