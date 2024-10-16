@@ -1,11 +1,11 @@
 import { IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { AngerDataDto } from "../anger-data.dto";
 
 export class CreateAngerDto {
-    @IsNotEmpty()
-    @IsNumber()
-    readonly intensity: number; //additionalData in emotion
 
     @IsNotEmpty()
-    @IsString()
+    readonly data: AngerDataDto;
+
+    @IsNotEmpty()
     readonly context: string; //Explanation, inherited from emotion class.
 }

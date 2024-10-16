@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CreateAngerDto } from 'src/common/dto/create-anger.dto/create-anger.dto';
+import { CreateAngerDto } from 'src/common/dto/anger/create-anger.dto/create-anger.dto';
 import { UpdateAngerDto } from 'src/common/dto/update-anger.dto/update-anger.dto';
 import { Anger } from 'src/entities/anger.entity';
 import { Repository } from 'typeorm';
@@ -13,6 +13,7 @@ export class AngerService {
     ) {}
 
     async create(createAngerDto: CreateAngerDto) : Promise<Anger> {
+        const newAnger = new Anger(createAngerDto.context, createAngerDto.data.intensity);
         const anger = this.angerRepository.create(createAngerDto);
         return this.angerRepository.save(anger);
     }
