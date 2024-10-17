@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { CreateAnxietyDto } from 'src/common/dto/create-anxiety.dto/create-anxiety.dto';
-import { UpdateAnxietyDto } from 'src/common/dto/update-anxiety.dto/update-anxiety.dto';
+import { CreateAnxietyDto } from 'src/common/dto/anxiety/create-anxiety.dto/create-anxiety.dto';
+import { UpdateAnxietyDto } from 'src/common/dto/anxiety/update-anxiety.dto/update-anxiety.dto'; 
 import { Anxiety } from 'src/entities/anxiety.entity';
 import { AnxietyService } from 'src/services/anxiety/anxiety.service';
 

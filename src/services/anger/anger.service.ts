@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateAngerDto } from 'src/common/dto/anger/create-anger.dto/create-anger.dto';
-import { UpdateAngerDto } from 'src/common/dto/update-anger.dto/update-anger.dto';
+import { UpdateAngerDto } from 'src/common/dto/anger/update-anger.dto/update-anger.dto';
 import { Anger } from 'src/entities/anger.entity';
 import { Repository } from 'typeorm';
 
