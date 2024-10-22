@@ -8,4 +8,7 @@ export class CreateAnxietyDto {
     @IsNotEmpty()
     @IsString()
     readonly context: string; //Explanation, inherited from emotion class.
+
+    @IsNotEmpty()
+    readonly title: string;
 }

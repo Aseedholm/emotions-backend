@@ -5,7 +5,7 @@ import { Anger } from 'src/entities/anger.entity';
 import { AngerService } from 'src/services/anger/anger.service';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Anger])],
+    imports: [TypeOrmModule.forFeature([Anger]),],
     providers: [AngerService],
     controllers: [AngerController]
 })

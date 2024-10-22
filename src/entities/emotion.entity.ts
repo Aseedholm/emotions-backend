@@ -9,14 +9,18 @@ export abstract class Emotion<T> extends AbstractEntity {
     name: string;
 
     @Column()
+    title: string;
+
+    @Column()
     context: string;
     
     additionalData: T; // Generic type to allow for flexible additional data
 
-    constructor(name: string, context: string, additionalData: T) {
+    constructor(name: string, context: string, title: string, additionalData: T) {
         super();
         this.name = name;
-        this.context = this.context;
+        this.context = context;
+        this.title = title;
         this.additionalData = additionalData; // Set additional data
     }
 

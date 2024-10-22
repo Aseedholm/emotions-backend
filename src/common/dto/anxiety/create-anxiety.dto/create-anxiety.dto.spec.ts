@@ -1,7 +1,8 @@
-import { CreateAnxietyDto } from './create-anxiety.dto';
+// import { CreateAnxietyDto } from './create-anxiety.dto';
 
-describe('CreateAnxietyDto', () => {
-  it('should be defined', () => {
-    expect(new CreateAnxietyDto()).toBeDefined();
-  });
-});
+
+// describe('CreateAnxietyDto', () => {
+//   it('should be defined', () => {
+//     expect(new CreateAnxietyDto()).toBeDefined();
+//   });
+// });

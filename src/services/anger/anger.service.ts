@@ -13,7 +13,7 @@ export class AngerService {
     ) {}
 
     async create(createAngerDto: CreateAngerDto) : Promise<Anger> {
-        const newAnger = new Anger(createAngerDto.context, createAngerDto.data.intensity);
+        const newAnger = new Anger(createAngerDto.context, createAngerDto.title, createAngerDto.data.intensity);
         const anger = this.angerRepository.create(createAngerDto);
         return this.angerRepository.save(anger);
     }
