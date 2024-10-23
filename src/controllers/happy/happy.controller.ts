@@ -20,18 +20,18 @@ export class HappyController {
 
     //TODO -- Update this to be a number not string.
     @Get(':id')
-    async findOne(@Param('id') id: string) : Promise<Happy> {
-        return this.happyService.findOne(+id);
+    async findOne(@Param('id') id: number) : Promise<Happy> {
+        return this.happyService.findOne(id);
     }
 
     @Put(':id')
-    async update(@Param('id') id: string, @Body() updateHappyDto: UpdateHappyDto) : Promise<Happy> {
-        return this.happyService.update(+id, updateHappyDto);
+    async update(@Param('id') id: number, @Body() updateHappyDto: UpdateHappyDto) : Promise<Happy> {
+        return this.happyService.update(id, updateHappyDto);
     }
 
     @Delete(':id')
-    async remove(@Param('id') id: string) : Promise<number> {
-        return this.happyService.remove(+id);
+    async remove(@Param('id') id: number) : Promise<number> {
+        return this.happyService.remove(id);
     }
 
 }

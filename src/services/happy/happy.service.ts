@@ -13,7 +13,6 @@ export class HappyService {
     ) {}
 
     async create(createHappyDto: CreateHappyDto) : Promise<Happy> {
-        const newHappy = new Happy(createHappyDto.context, createHappyDto.title, createHappyDto.data.somethingToRememberThisHappiness);
         const happy = this.happyRepository.create(createHappyDto);
         return this.happyRepository.save(happy);
     }

@@ -9,27 +9,27 @@ export class AnxietyController {
     constructor(private readonly anxietyService: AnxietyService) {}
 
   @Post()
-  create(@Body() createAnxietyDto: CreateAnxietyDto) : Promise<Anxiety> {
+  async create(@Body() createAnxietyDto: CreateAnxietyDto) : Promise<Anxiety> {
     return this.anxietyService.create(createAnxietyDto);
   }
 
   @Get()
-  findAll() : Promise<Anxiety[]> {
+  async findAll() : Promise<Anxiety[]> {
     return this.anxietyService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) : Promise<Anxiety> {
-    return this.anxietyService.findOne(+id);
+  async findOne(@Param('id') id: number) : Promise<Anxiety> {
+    return this.anxietyService.findOne(id);
   }
 
   @Put(':id') 
-  update(@Param('id') id: string, @Body() updateAnxietyDto: UpdateAnxietyDto) : Promise<Anxiety> {
-    return this.anxietyService.update(+id, updateAnxietyDto);
+  async update(@Param('id') id: number, @Body() updateAnxietyDto: UpdateAnxietyDto) : Promise<Anxiety> {
+    return this.anxietyService.update(id, updateAnxietyDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) : Promise<number>{
-    return this.anxietyService.remove(+id);
+  async remove(@Param('id') id: number) : Promise<number>{
+    return this.anxietyService.remove(id);
   }
 }
